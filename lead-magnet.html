@@ -3,104 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free 7-Day Confidence Challenge | TransformU</title>
+    <title>Free AI Cost-Cutting Guide | jdublu AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            background: #0a0a0f;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #fff;
+            color: #e0e0e0;
             padding: 2em;
         }
         .container {
             max-width: 700px;
             width: 100%;
-            text-align: center;
         }
         .badge {
             display: inline-block;
-            background: #e94560;
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.3);
+            color: #00d4ff;
             padding: 8px 25px;
             border-radius: 50px;
             font-size: 0.9em;
-            font-weight: bold;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             margin-bottom: 2em;
         }
-        h1 { font-size: 3em; margin-bottom: 0.5em; line-height: 1.2; }
-        .subtitle { font-size: 1.3em; opacity: 0.9; margin-bottom: 2em; }
+        h1 { font-size: 2.8em; margin-bottom: 0.5em; line-height: 1.2; font-weight: 800; }
+        h1 .highlight {
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle { font-size: 1.2em; color: #888; margin-bottom: 2em; }
         .features {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
             border-radius: 20px;
             padding: 2em;
             margin-bottom: 2em;
             text-align: left;
         }
-        .features h3 { text-align: center; margin-bottom: 1em; font-size: 1.3em; }
+        .features h3 { text-align: center; margin-bottom: 1em; font-size: 1.2em; color: #fff; }
         .features ul { list-style: none; }
         .features li {
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
             display: flex;
             align-items: center;
             gap: 15px;
+            color: #aaa;
         }
         .features li:last-child { border-bottom: none; }
-        .features i { color: #4CAF50; font-size: 1.2em; }
+        .features i { color: #00d4ff; font-size: 1.1em; }
         .form-box {
-            background: #fff;
-            color: #333;
-            border-radius: 20px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 24px;
             padding: 2.5em;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.4);
         }
-        .form-box h2 { color: #1a1a2e; margin-bottom: 0.5em; }
-        .form-box p { color: #666; margin-bottom: 1.5em; }
+        .form-box h2 { color: #fff; margin-bottom: 0.5em; font-size: 1.5em; }
+        .form-box p { color: #888; margin-bottom: 1.5em; font-size: 0.95em; }
         input[type="email"], input[type="text"] {
             width: 100%;
-            padding: 15px 20px;
-            border: 2px solid #e0e0e0;
-            border-radius: 10px;
+            padding: 16px 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
             font-size: 1em;
             margin-bottom: 15px;
+            background: rgba(255,255,255,0.03);
+            color: #fff;
             transition: border-color 0.3s;
         }
+        input::placeholder { color: #555; }
         input:focus {
             outline: none;
-            border-color: #e94560;
+            border-color: #00d4ff;
         }
         .cta-btn {
             width: 100%;
             padding: 18px;
-            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
             color: #fff;
             border: none;
-            border-radius: 10px;
-            font-size: 1.2em;
-            font-weight: bold;
+            border-radius: 12px;
+            font-size: 1.1em;
+            font-weight: 700;
             cursor: pointer;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+            box-shadow: 0 10px 30px rgba(0,212,255,0.3);
         }
         .trust-text {
             margin-top: 1em;
             font-size: 0.85em;
-            color: #999;
+            color: #444;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
         }
-        .trust-text i { color: #4CAF50; }
+        .trust-text i { color: #00d4ff; }
+        .secondary-cta {
+            text-align: center;
+            margin-top: 1.5em;
+        }
+        .secondary-cta a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .secondary-cta a:hover { text-decoration: underline; }
+
+        /* Success state */
+        .success-box {
+            display: none;
+            text-align: center;
+            padding: 2em 0;
+        }
+        .success-box i {
+            font-size: 4em;
+            color: #4CAF50;
+            margin-bottom: 0.5em;
+        }
+        .success-box h2 { color: #fff; margin-bottom: 0.5em; }
+        .success-box p { color: #888; margin-bottom: 1.5em; }
+
         @media (max-width: 600px) {
             h1 { font-size: 2em; }
             .subtitle { font-size: 1em; }
@@ -110,40 +146,73 @@
 <body>
     <div class="container">
         <div class="badge">Free Download</div>
-        <h1>The 7-Day Confidence Challenge</h1>
-        <p class="subtitle">A step-by-step workbook to boost your confidence in just one week. No fluff. Just results.</p>
+        <h1>5 Ways AI Can Cut Your Operating Costs by <span class="highlight">73%</span></h1>
+        <p class="subtitle">A no-fluff guide for business owners who want to stop bleeding money on repetitive tasks and missed leads.</p>
         
         <div class="features">
             <h3>What's Inside:</h3>
             <ul>
-                <li><i class="fas fa-check-circle"></i> Daily 10-minute confidence-building exercises</li>
-                <li><i class="fas fa-check-circle"></i> The "Mirror Method" used by top executives</li>
-                <li><i class="fas fa-check-circle"></i> Printable progress tracker</li>
-                <li><i class="fas fa-check-circle"></i> Morning & evening mindset rituals</li>
-                <li><i class="fas fa-check-circle"></i> Bonus: 5 affirmations that actually work</li>
+                <li><i class="fas fa-check-circle"></i> The exact 5 workflows AI replaces first (with cost breakdowns)</li>
+                <li><i class="fas fa-check-circle"></i> A self-audit checklist — score your business's AI readiness</li>
+                <li><i class="fas fa-check-circle"></i> Real numbers: what other businesses paid vs. what they saved</li>
+                <li><i class="fas fa-check-circle"></i> The one mistake that makes AI projects fail (and how to avoid it)</li>
+                <li><i class="fas fa-check-circle"></i> Bonus: ROI calculator template</li>
             </ul>
         </div>
         
-        <div class="form-box">
+        <div class="form-box" id="form-box">
             <h2>Get Instant Access</h2>
-            <p>Enter your details below and the workbook will be emailed to you immediately.</p>
-            <form onsubmit="handleSubmit(event)">
-                <input type="text" placeholder="Your First Name" required>
-                <input type="email" placeholder="Your Best Email Address" required>
-                <button type="submit" class="cta-btn">Send Me The Free Workbook <i class="fas fa-arrow-right"></i></button>
+            <p>Enter your details and the PDF will be emailed to you immediately.</p>
+            <form id="leadForm">
+                <input type="text" name="name" placeholder="Your First Name" required>
+                <input type="email" name="email" placeholder="Your Best Email Address" required>
+                <input type="text" name="business" placeholder="Your Business Name & Industry" required>
+                <button type="submit" class="cta-btn">Send Me The Free Guide <i class="fas fa-arrow-right"></i></button>
             </form>
             <div class="trust-text">
-                <i class="fas fa-lock"></i> Your information is 100% secure. Unsubscribe anytime.
+                <i class="fas fa-lock"></i> Your information is secure. Unsubscribe anytime.
             </div>
+            <div class="secondary-cta">
+                <a href="https://cal.com/m-jway-mk-janway-kqkdfa/free-ai-audit" target="_blank">
+                    Rather talk to a human? Book a free AI audit instead →
+                </a>
+            </div>
+        </div>
+
+        <div class="success-box" id="success-box">
+            <i class="fas fa-check-circle"></i>
+            <h2>Check Your Inbox!</h2>
+            <p>The guide is on its way. While you wait, book your free AI audit — spots are limited.</p>
+            <a href="https://cal.com/m-jway-mk-janway-kqkdfa/free-ai-audit" target="_blank" class="cta-btn">Book Free AI Audit</a>
         </div>
     </div>
     
     <script>
-        function handleSubmit(e) {
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thanks! Check your email for the workbook. (Connect this to your email service like Mailchimp or ConvertKit)');
-            window.location.href = 'index.html';
-        }
+            
+            // Capture data (connect to Formspree, ConvertKit, or Mailchimp for real capture)
+            const data = {
+                name: this.name.value,
+                email: this.email.value,
+                business: this.business.value
+            };
+            console.log('Lead captured:', data);
+            
+            // Hide form, show success
+            document.getElementById('form-box').style.display = 'none';
+            document.getElementById('success-box').style.display = 'block';
+            
+            // TODO: Connect to your email service
+            // Formspree: https://formspree.io (free, 50 submissions/mo)
+            // ConvertKit: https://convertkit.com (paid, better automation)
+            // Example Formspree integration:
+            // fetch('https://formspree.io/f/YOUR_FORM_ID', {
+            //     method: 'POST',
+            //     headers: {'Content-Type': 'application/json'},
+            //     body: JSON.stringify(data)
+            // });
+        });
     </script>
 </body>
 </html>
