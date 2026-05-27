@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free 7-Day Confidence Challenge | TransformU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 2em;
+        }
+        .container {
+            max-width: 700px;
+            width: 100%;
+            text-align: center;
+        }
+        .badge {
+            display: inline-block;
+            background: #e94560;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 0.9em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 2em;
+        }
+        h1 { font-size: 3em; margin-bottom: 0.5em; line-height: 1.2; }
+        .subtitle { font-size: 1.3em; opacity: 0.9; margin-bottom: 2em; }
+        .features {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2em;
+            margin-bottom: 2em;
+            text-align: left;
+        }
+        .features h3 { text-align: center; margin-bottom: 1em; font-size: 1.3em; }
+        .features ul { list-style: none; }
+        .features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .features li:last-child { border-bottom: none; }
+        .features i { color: #4CAF50; font-size: 1.2em; }
+        .form-box {
+            background: #fff;
+            color: #333;
+            border-radius: 20px;
+            padding: 2.5em;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .form-box h2 { color: #1a1a2e; margin-bottom: 0.5em; }
+        .form-box p { color: #666; margin-bottom: 1.5em; }
+        input[type="email"], input[type="text"] {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        input:focus {
+            outline: none;
+            border-color: #e94560;
+        }
+        .cta-btn {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(233, 69, 96, 0.4);
+        }
+        .trust-text {
+            margin-top: 1em;
+            font-size: 0.85em;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        .trust-text i { color: #4CAF50; }
+        @media (max-width: 600px) {
+            h1 { font-size: 2em; }
+            .subtitle { font-size: 1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="badge">Free Download</div>
+        <h1>The 7-Day Confidence Challenge</h1>
+        <p class="subtitle">A step-by-step workbook to boost your confidence in just one week. No fluff. Just results.</p>
+        
+        <div class="features">
+            <h3>What's Inside:</h3>
+            <ul>
+                <li><i class="fas fa-check-circle"></i> Daily 10-minute confidence-building exercises</li>
+                <li><i class="fas fa-check-circle"></i> The "Mirror Method" used by top executives</li>
+                <li><i class="fas fa-check-circle"></i> Printable progress tracker</li>
+                <li><i class="fas fa-check-circle"></i> Morning & evening mindset rituals</li>
+                <li><i class="fas fa-check-circle"></i> Bonus: 5 affirmations that actually work</li>
+            </ul>
+        </div>
+        
+        <div class="form-box">
+            <h2>Get Instant Access</h2>
+            <p>Enter your details below and the workbook will be emailed to you immediately.</p>
+            <form onsubmit="handleSubmit(event)">
+                <input type="text" placeholder="Your First Name" required>
+                <input type="email" placeholder="Your Best Email Address" required>
+                <button type="submit" class="cta-btn">Send Me The Free Workbook <i class="fas fa-arrow-right"></i></button>
+            </form>
+            <div class="trust-text">
+                <i class="fas fa-lock"></i> Your information is 100% secure. Unsubscribe anytime.
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function handleSubmit(e) {
+            e.preventDefault();
+            alert('Thanks! Check your email for the workbook. (Connect this to your email service like Mailchimp or ConvertKit)');
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome! Your Order is Confirmed | TransformU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            line-height: 1.8;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 3em 2em; }
+        .success-header {
+            text-align: center;
+            padding: 3em 0;
+        }
+        .success-icon {
+            font-size: 5em;
+            color: #4CAF50;
+            margin-bottom: 0.5em;
+            animation: scaleIn 0.5s ease;
+        }
+        .success-header h1 { font-size: 2.5em; margin-bottom: 0.5em; }
+        .success-header p { font-size: 1.2em; opacity: 0.9; }
+        .order-box {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+        .order-box h3 {
+            margin-bottom: 1em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 1em 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .order-item:last-child { border-bottom: none; }
+        .order-total {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: 2px solid rgba(255,255,255,0.2);
+        }
+        .access-box {
+            background: #fff;
+            color: #333;
+            border-radius: 20px;
+            padding: 2.5em;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+        .access-box h2 { color: #1a1a2e; margin-bottom: 0.5em; }
+        .access-box p { color: #666; margin-bottom: 1.5em; }
+        .access-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: #fff;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .access-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(76, 175, 80, 0.4);
+        }
+        .login-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5em;
+            margin-top: 1.5em;
+            text-align: left;
+        }
+        .login-info p { margin-bottom: 0.5em; font-family: monospace; font-size: 0.95em; }
+        .login-info strong { color: #1a1a2e; }
+        
+        /* Upsell Section */
+        .upsell-section {
+            background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+            border-radius: 20px;
+            padding: 3em 2em;
+            text-align: center;
+            margin-bottom: 2em;
+            position: relative;
+            overflow: hidden;
+        }
+        .upsell-badge {
+            position: absolute;
+            top: 20px;
+            right: -35px;
+            background: #e94560;
+            color: #fff;
+            padding: 10px 50px;
+            transform: rotate(45deg);
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .upsell-section h2 { font-size: 2.2em; margin-bottom: 0.5em; }
+        .upsell-section .subtitle { font-size: 1.2em; opacity: 0.95; margin-bottom: 1.5em; }
+        .upsell-price {
+            font-size: 3em;
+            font-weight: bold;
+            margin: 0.5em 0;
+        }
+        .upsell-price .old {
+            font-size: 0.5em;
+            text-decoration: line-through;
+            opacity: 0.7;
+            margin-right: 15px;
+        }
+        .upsell-features {
+            text-align: left;
+            max-width: 400px;
+            margin: 1.5em auto;
+            list-style: none;
+        }
+        .upsell-features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .upsell-features i { color: #fff; }
+        .upsell-btn {
+            display: inline-block;
+            background: #fff;
+            color: #f57c00;
+            padding: 20px 60px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-top: 1em;
+            transition: transform 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        .upsell-btn:hover { transform: scale(1.05); }
+        .no-thanks {
+            display: block;
+            margin-top: 1.5em;
+            color: rgba(255,255,255,0.8);
+            text-decoration: underline;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1em;
+            width: 100%;
+        }
+        .timer-box {
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 1em;
+            margin: 1.5em auto;
+            max-width: 300px;
+        }
+        .timer-box p { margin-bottom: 0.5em; font-size: 0.9em; }
+        #upsell-timer {
+            font-size: 2em;
+            font-weight: bold;
+            font-family: monospace;
+        }
+        
+        .next-steps {
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 2em;
+            margin-bottom: 2em;
+        }
+        .next-steps h3 { margin-bottom: 1em; }
+        .step-list { list-style: none; }
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .step-list li:last-child { border-bottom: none; }
+        .step-num {
+            background: #e94560;
+            color: #fff;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .share-box {
+            background: #fff;
+            color: #333;
+            border-radius: 20px;
+            padding: 2em;
+            text-align: center;
+        }
+        .share-box h3 { color: #1a1a2e; margin-bottom: 0.5em; }
+        .share-box p { color: #666; margin-bottom: 1em; }
+        .share-btns {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .share-btns a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+        .share-btns a:hover { transform: translateY(-2px); }
+        .fb { background: #1877F2; }
+        .tw { background: #1DA1F2; }
+        .wa { background: #25D366; }
+        .email-share { background: #EA4335; }
+        
+        footer {
+            text-align: center;
+            padding: 2em;
+            opacity: 0.7;
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            .success-header h1 { font-size: 1.8em; }
+            .upsell-section h2 { font-size: 1.6em; }
+            .upsell-price { font-size: 2em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Success Header -->
+        <div class="success-header">
+            <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+            <h1>Welcome to the TransformU Family!</h1>
+            <p>Your order is confirmed. Check your email for your receipt.</p>
+        </div>
+        
+        <!-- Order Summary -->
+        <div class="order-box">
+            <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+            <div class="order-item">
+                <span>30-Day Transformation Program</span>
+                <span>$97.00</span>
+            </div>
+            <div class="order-item">
+                <span>Subtotal</span>
+                <span>$97.00</span>
+            </div>
+            <div class="order-item">
+                <span>Tax</span>
+                <span>$0.00</span>
+            </div>
+            <div class="order-total">
+                <span>Total Paid</span>
+                <span>$97.00</span>
+            </div>
+        </div>
+        
+        <!-- Access Box -->
+        <div class="access-box">
+            <h2><i class="fas fa-door-open" style="color: #4CAF50;"></i> Access Your Program</h2>
+            <p>Your account has been created. Click below to log in and start your transformation.</p>
+            <a href="#" class="access-btn">Access My Dashboard <i class="fas fa-arrow-right"></i></a>
+            <div class="login-info">
+                <p><strong>Email:</strong> <span id="customer-email">Loading...</span></p>
+                <script>
+                    // Pull email from URL ?email= parameter or replace with your backend logic
+                    const params = new URLSearchParams(window.location.search);
+                    document.getElementById('customer-email').textContent = params.get('email') || 'Check your inbox';
+                </script>
+                <p><strong>Password:</strong> Check your email for login details</p>
+                <p style="margin-top: 1em; font-size: 0.9em; color: #666;">Didn't receive it? Check spam or <a href="#" style="color: #e94560;">click here to resend</a>.</p>
+            </div>
+        </div>
+        
+        <!-- Upsell Section -->
+        <div class="upsell-section" id="upsell">
+            <div class="upsell-badge">ONE-TIME OFFER</div>
+            <h2>Wait! Want to 10x Your Results?</h2>
+            <p class="subtitle">Add the Confidence Accelerator — 5 private coaching calls with Alex Morgan</p>
+            
+            <div class="upsell-price">
+                <span class="old">$297</span>
+                <span>$97</span>
+            </div>
+            <p style="font-size: 0.9em; opacity: 0.9;">(Only for new members — 70% off)</p>
+            
+            <ul class="upsell-features">
+                <li><i class="fas fa-check-circle"></i> 5x 30-minute 1-on-1 coaching calls</li>
+                <li><i class="fas fa-check-circle"></i> Personalized confidence action plan</li>
+                <li><i class="fas fa-check-circle"></i> Direct WhatsApp access for 30 days</li>
+                <li><i class="fas fa-check-circle"></i> Accountability check-ins</li>
+                <li><i class="fas fa-check-circle"></i> Recorded calls to keep forever</li>
+            </ul>
+            
+            <div class="timer-box">
+                <p>This exclusive price expires in:</p>
+                <div id="upsell-timer">10:00</div>
+            </div>
+            
+            <button class="upsell-btn" onclick="addUpsell()">
+                Yes! Add Coaching for $97 <i class="fas fa-bolt"></i>
+            </button>
+            <button class="no-thanks" onclick="skipUpsell()">
+                No thanks, I'll do it on my own
+            </button>
+        </div>
+        
+        <!-- Next Steps -->
+        <div class="next-steps">
+            <h3><i class="fas fa-list-check"></i> Your Next Steps</h3>
+            <ul class="step-list">
+                <li>
+                    <span class="step-num">1</span>
+                    <div>
+                        <strong>Check your email</strong>
+                        <p>We sent your login details and getting-started guide.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">2</span>
+                    <div>
+                        <strong>Join the private community</strong>
+                        <p>Click the link in your email to join our exclusive members-only group.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">3</span>
+                    <div>
+                        <strong>Start Day 1 today</strong>
+                        <p>Log in and complete your first exercise. It takes 10 minutes.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="step-num">4</span>
+                    <div>
+                        <strong>Mark your calendar</strong>
+                        <p>Live Q&A calls happen every Tuesday at 7 PM EST.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Share -->
+        <div class="share-box">
+            <h3>Know Someone Who Needs This?</h3>
+            <p>Share the transformation with a friend. They'll thank you later.</p>
+            <div class="share-btns">
+                <a href="#" class="fb"><i class="fab fa-facebook-f"></i> Share</a>
+                <a href="#" class="tw"><i class="fab fa-twitter"></i> Tweet</a>
+                <a href="#" class="wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:?subject=Check%20out%20this%20program&body=Hey,%20I%20just%20joined%20the%2030-Day%20Transformation%20Program%20and%20thought%20you'd%20love%20it%20too:%20https://jdublu.lat" class="email-share"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Questions? Email us at support@jdublu.lat | <a href="#" style="color: #e94560;">Help Center</a></p>
+            <p style="margin-top: 0.5em; font-size: 0.9em;">&copy; 2024 TransformU</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Upsell countdown timer (10 minutes)
+        let upsellTime = 10 * 60;
+        const timerEl = document.getElementById('upsell-timer');
+        
+        function updateUpsellTimer() {
+            const minutes = Math.floor(upsellTime / 60);
+            const seconds = upsellTime % 60;
+            timerEl.textContent = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+            
+            if (upsellTime > 0) {
+                upsellTime--;
+            } else {
+                clearInterval(upsellInterval);
+                document.querySelector('.upsell-section').style.opacity = '0.5';
+                document.querySelector('.upsell-btn').disabled = true;
+                document.querySelector('.upsell-btn').textContent = 'Offer Expired';
+            }
+        }
+        
+        const upsellInterval = setInterval(updateUpsellTimer, 1000);
+        updateUpsellTimer();
+        
+        function addUpsell() {
+            alert('Upsell added to your order! (Integrate with your payment processor like Stripe or PayPal)');
+            document.getElementById('upsell').style.display = 'none';
+        }
+        
+        function skipUpsell() {
+            document.getElementById('upsell').style.display = 'none';
+        }
+        
+        // Confetti effect on load
+        function createConfetti() {
+            const colors = ['#e94560', '#4CAF50', '#ff9800', '#2196F3', '#fff'];
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.style.position = 'fixed';
+                confetti.style.width = '10px';
+                confetti.style.height = '10px';
+                confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                confetti.style.left = Math.random() * 100 + 'vw';
+                confetti.style.top = '-10px';
+                confetti.style.borderRadius = '50%';
+                confetti.style.zIndex = '9999';
+                confetti.style.animation = `fall ${Math.random() * 3 + 2}s linear forwards`;
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+        
+        // Add fall animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                to {
+                    transform: translateY(100vh) rotate(720deg);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        window.addEventListener('load', createConfetti);
+    </script>
+</body>
+</html>

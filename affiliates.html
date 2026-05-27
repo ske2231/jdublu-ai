@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affiliate Program | Earn 40% Per Sale — TransformU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 1.5em 2em;
+            text-align: center;
+        }
+        .logo { font-size: 1.5em; font-weight: bold; color: #e94560; }
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #fff;
+            padding: 5em 2em;
+            text-align: center;
+        }
+        .hero h1 { font-size: 3em; margin-bottom: 0.5em; }
+        .hero .highlight { color: #e94560; }
+        .hero p { font-size: 1.3em; opacity: 0.9; margin-bottom: 2em; }
+        .cta-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            color: #fff;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(233, 69, 96, 0.5);
+        }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2em; }
+        .section { padding: 4em 0; }
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1a1a2e;
+            margin-bottom: 0.5em;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3em;
+            font-size: 1.1em;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 4em;
+        }
+        .stat-box {
+            background: #fff;
+            padding: 2em;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .stat-number {
+            font-size: 3em;
+            font-weight: bold;
+            color: #e94560;
+            display: block;
+        }
+        .stat-label { color: #666; font-size: 0.95em; }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .feature-card {
+            background: #fff;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .feature-card i {
+            font-size: 2.5em;
+            color: #e94560;
+            margin-bottom: 0.5em;
+        }
+        .feature-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 0.5em;
+            font-size: 1.3em;
+        }
+        .feature-card p { color: #666; }
+        .commission-table {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin: 3em 0;
+        }
+        .commission-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .commission-table th {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 1em;
+            text-align: left;
+        }
+        .commission-table td {
+            padding: 1em;
+            border-bottom: 1px solid #eee;
+        }
+        .commission-table tr:last-child td { border-bottom: none; }
+        .commission-table tr:hover { background: #f8f9fa; }
+        .price { font-weight: bold; color: #4CAF50; font-size: 1.1em; }
+        .signup-box {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 4em 2em;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4em 0;
+        }
+        .signup-box h2 { font-size: 2.5em; margin-bottom: 0.5em; }
+        .signup-box p { font-size: 1.2em; opacity: 0.9; margin-bottom: 2em; }
+        .signup-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .signup-form input {
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+        .signup-form button {
+            padding: 18px;
+            background: linear-gradient(135deg, #e94560 0%, #ff6b6b 100%);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .signup-form button:hover { transform: translateY(-2px); }
+        .faq { background: #fff; padding: 2em; border-radius: 15px; margin-top: 2em; }
+        .faq h3 { color: #1a1a2e; margin-bottom: 1em; }
+        .faq-item { margin-bottom: 1.5em; }
+        .faq-item h4 { color: #e94560; margin-bottom: 0.3em; }
+        .faq-item p { color: #666; }
+        footer {
+            background: #1a1a2e;
+            color: #fff;
+            text-align: center;
+            padding: 2em;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2em; }
+            .section-title { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">TransformU Affiliate Program</div>
+    </header>
+    
+    <section class="hero">
+        <h1>Earn <span class="highlight">40% Commission</span><br>On Every Sale</h1>
+        <p>Promote the 30-Day Transformation Program and earn $38.80 per sale.<br>No caps. Weekly payouts. Real-time tracking.</p>
+        <a href="#apply" class="cta-btn">Become an Affiliate <i class="fas fa-arrow-right"></i></a>
+    </section>
+    
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">The Numbers</h2>
+            <p class="section-subtitle">Why affiliates love promoting our program</p>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="stat-number">40%</span>
+                    <span class="stat-label">Commission Per Sale</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$38.80</span>
+                    <span class="stat-label">Average Earnings Per Sale</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">8.2%</span>
+                    <span class="stat-label">Conversion Rate</span>
+                </div>
+                <div class="stat-box">
+                    <span class="stat-number">$1,552</span>
+                    <span class="stat-label">Average Affiliate Monthly Earnings</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" style="background: #fff;">
+        <div class="container">
+            <h2 class="section-title">What You Get</h2>
+            <p class="section-subtitle">Everything you need to start promoting today</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-link"></i>
+                    <h3>Unique Affiliate Link</h3>
+                    <p>Get a personalized tracking link. Every click and conversion is recorded in real-time.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bullhorn"></i>
+                    <h3>Done-For-You Marketing</h3>
+                    <p>Access email swipes, social media posts, banner ads, and video scripts. Just copy and promote.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Real-Time Dashboard</h3>
+                    <p>Track clicks, conversions, and earnings in your affiliate dashboard. Updated every hour.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>Weekly Payouts</h3>
+                    <p>Get paid every Friday via PayPal or bank transfer. Minimum payout is just $50.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>Affiliate Support</h3>
+                    <p>Direct access to our affiliate manager for strategy, optimization, and custom requests.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-gift"></i>
+                    <h3>Bonus Contests</h3>
+                    <p>Win extra cash prizes in our monthly affiliate contests. Top performers get bonuses up to $1,000.</p>
+                </div>
+            </div>
+            
+            <div class="commission-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Your Commission (40%)</th>
+                            <th>Cookie Duration</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>30-Day Transformation Program</strong></td>
+                            <td class="price">$97</td>
+                            <td class="price">$38.80</td>
+                            <td>60 Days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Confidence Accelerator (Upsell)</strong></td>
+                            <td class="price">$47</td>
+                            <td class="price">$18.80</td>
+                            <td>60 Days</td>
+                        </tr>
+                        <tr>
+                            <td><strong>1-on-1 Coaching Session</strong></td>
+                            <td class="price">$297</td>
+                            <td class="price">$118.80</td>
+                            <td>60 Days</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="apply">
+        <div class="container">
+            <div class="signup-box">
+                <h2>Ready to Start Earning?</h2>
+                <p>Applications are reviewed within 24 hours. Approved affiliates get instant access to their dashboard.</p>
+                <form class="signup-form" onsubmit="handleApply(event)">
+                    <input type="text" placeholder="Your Full Name" required>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <input type="text" placeholder="Your Website / Social Media URL" required>
+                    <input type="text" placeholder="How do you plan to promote? (Blog, YouTube, Email, etc.)">
+                    <button type="submit">Apply Now <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+            
+            <div class="faq">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-item">
+                    <h4>How and when do I get paid?</h4>
+                    <p>We pay every Friday via PayPal or direct bank transfer. You need a minimum balance of $50 to receive a payout.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>How long is the cookie duration?</h4>
+                    <p>60 days. If someone clicks your link and buys within 60 days, you get the commission.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Can I use paid ads to promote?</h4>
+                    <p>Yes, but you cannot bid on branded keywords (our brand name) or use our brand in display URLs without permission.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Is there a minimum sales requirement?</h4>
+                    <p>No. There's no minimum sales quota. You can promote as much or as little as you want.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 TransformU. All rights reserved. | <a href="#" style="color: #e94560;">Terms</a> | <a href="#" style="color: #e94560;">Privacy</a></p>
+    </footer>
+    
+    <script>
+        function handleApply(e) {
+            e.preventDefault();
+            alert('Application submitted! We\'ll review it within 24 hours. (Connect this to your affiliate platform like Rewardful, FirstPromoter, or Impact)');
+        }
+    </script>
+</body>
+</html>

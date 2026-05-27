@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Copy Library | TransformU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.8;
+            padding: 2em;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 {
+            text-align: center;
+            color: #1a1a2e;
+            margin-bottom: 0.5em;
+            font-size: 2.5em;
+        }
+        .intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 3em;
+        }
+        .platform-section {
+            background: #fff;
+            border-radius: 15px;
+            padding: 2em;
+            margin-bottom: 2em;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+        .platform-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 1.5em;
+            padding-bottom: 1em;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        .platform-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            color: #fff;
+        }
+        .facebook { background: #1877F2; }
+        .google { background: #4285F4; }
+        .tiktok { background: #000; }
+        .youtube { background: #FF0000; }
+        .platform-name { font-size: 1.5em; font-weight: bold; color: #1a1a2e; }
+        .ad-variant {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 1.5em;
+            margin-bottom: 1em;
+            border-left: 4px solid #e94560;
+        }
+        .variant-label {
+            font-weight: bold;
+            color: #e94560;
+            margin-bottom: 0.5em;
+            font-size: 0.9em;
+            text-transform: uppercase;
+        }
+        .ad-headline {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #1a1a2e;
+            margin-bottom: 0.5em;
+        }
+        .ad-body {
+            color: #555;
+            margin-bottom: 0.8em;
+            line-height: 1.7;
+        }
+        .ad-cta {
+            display: inline-block;
+            background: #1a1a2e;
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+        .tags {
+            margin-top: 1em;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .tag {
+            background: #e7f3ff;
+            color: #0066cc;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        .tips-box {
+            background: #fffbeb;
+            border: 1px solid #fcd34d;
+            border-radius: 10px;
+            padding: 1.5em;
+            margin-top: 2em;
+        }
+        .tips-box h3 { color: #92400e; margin-bottom: 0.5em; }
+        .tips-box ul { margin-left: 1.5em; color: #78350f; }
+        .tips-box li { margin-bottom: 0.5em; }
+        pre {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 1em;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            margin-top: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ad Copy Library</h1>
+        <p class="intro">Ready-to-use ad copy for multiple platforms. Test each variant with a small budget, then scale the winner.</p>
+        
+        <!-- Facebook / Instagram Ads -->
+        <div class="platform-section">
+            <div class="platform-header">
+                <div class="platform-icon facebook"><i class="fab fa-facebook-f"></i></div>
+                <div class="platform-name">Facebook & Instagram Ads</div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Variant A - Pain Point</div>
+                <div class="ad-headline">Tired of Feeling Invisible in Meetings?</div>
+                <div class="ad-body">
+                    You have great ideas. But when it's time to speak up, your heart races and your mind goes blank.
+
+                    It's not because you're not smart enough. It's because no one ever taught you the skill of confidence.
+
+                    Our 30-Day Transformation Program gives you the exact exercises, scripts, and daily actions to speak with authority — in just 10 minutes a day.
+
+                    1,000+ people have already transformed their presence at work and in life.
+                </div>
+                <div class="ad-cta">Get Instant Access</div>
+                <div class="tags">
+                    <span class="tag">Image: Person presenting confidently</span>
+                    <span class="tag">Audience: 25-45, interested in self-improvement</span>
+                    <span class="tag">Placement: Feed + Stories</span>
+                </div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Variant B - Story Hook</div>
+                <div class="ad-headline">I Used to Freeze Every Time I Had to Speak</div>
+                <div class="ad-body">
+                    Three years ago, I was the quietest person in every room.
+
+                    Today, I run a 7-figure business and speak on stages.
+
+                    What changed? I stopped trying to "feel" confident and started using a proven system.
+
+                    The 30-Day Transformation Program is that exact system — broken down into daily 10-minute exercises anyone can do.
+
+                    No fluff. No motivational quotes. Just techniques that work.
+                </div>
+                <div class="ad-cta">See the Program</div>
+                <div class="tags">
+                    <span class="tag">Format: Video Ad (talking head)</span>
+                    <span class="tag">Hook: First 3 seconds = "I used to freeze..."</span>
+                    <span class="tag">Audience: Lookalike of buyers</span>
+                </div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Variant C - Social Proof</div>
+                <div class="ad-headline">"This Changed My Life in 30 Days" — Sarah M.</div>
+                <div class="ad-body">
+                    Sarah wasn't naturally confident. She described herself as "socially awkward."
+
+                    30 days after starting our program, she gave a presentation to 200 people and got a standing ovation.
+
+                    Here's what she did differently:
+                    ✅ Daily 10-minute confidence exercises
+                    ✅ The "Mirror Method" for instant presence
+                    ✅ A simple script for starting any conversation
+
+                    Want the same results? The program is open now for $97.
+                </div>
+                <div class="ad-cta">Join 1,000+ Success Stories</div>
+                <div class="tags">
+                    <span class="tag">Format: Carousel Ad</span>
+                    <span class="tag">Slide 1: Testimonial quote</span>
+                    <span class="tag">Slides 2-4: Results/before-after</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Google Ads -->
+        <div class="platform-section">
+            <div class="platform-header">
+                <div class="platform-icon google"><i class="fab fa-google"></i></div>
+                <div class="platform-name">Google Search Ads</div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Search Ad 1 - High Intent</div>
+                <div class="ad-headline">How to Be More Confident | 30-Day Proven System</div>
+                <div class="ad-body">
+                    Stop waiting to "feel" ready. Confidence is a skill — and we teach it in 10 minutes a day. Only $97. 1,000+ success stories. 100% money-back guarantee. Start your transformation today.
+                </div>
+                <div class="ad-cta">Get Instant Access</div>
+                <div class="tags">
+                    <span class="tag">Keywords: how to be more confident, confidence building course</span>
+                    <span class="tag">Match Type: Phrase + Exact</span>
+                </div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Search Ad 2 - Goal-Focused</div>
+                <div class="ad-headline">Achieve Your Goals Faster | Science-Backed Method</div>
+                <div class="ad-body">
+                    Productivity isn't about working harder. It's about removing the mental blocks holding you back. Our 30-day system uses behavioral psychology to unlock your potential. Join now for $97.
+                </div>
+                <div class="ad-cta">Start Your Transformation</div>
+                <div class="tags">
+                    <span class="tag">Keywords: achieve goals faster, productivity system, personal transformation</span>
+                    <span class="tag">Bid Strategy: Maximize Conversions</span>
+                </div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">YouTube Pre-Roll Script</div>
+                <div class="ad-headline">30-Second Video Ad Script</div>
+                <div class="ad-body">
+                    <strong>[0-5s] Hook:</strong> "Raise your hand if you've ever stayed quiet when you had something important to say."
+
+                    <strong>[5-15s] Problem:</strong> "Most people think confidence is something you're born with. It's not. It's a skill. And like any skill, it can be trained."
+
+                    <strong>[15-25s] Solution:</strong> "The 30-Day Transformation Program gives you daily 10-minute exercises based on actual behavioral psychology research. Just $97 with a money-back guarantee."
+
+                    <strong>[25-30s] CTA:</strong> "Click the link below. Start your transformation today."
+                </div>
+                <div class="tags">
+                    <span class="tag">Format: Non-skippable 15s or skippable 30s</span>
+                    <span class="tag">Target: Self-improvement, business, psychology videos</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- TikTok Ads -->
+        <div class="platform-section">
+            <div class="platform-header">
+                <div class="platform-icon tiktok"><i class="fab fa-tiktok"></i></div>
+                <div class="platform-name">TikTok Ads</div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Hook Script 1</div>
+                <div class="ad-body">
+                    <strong>Visual:</strong> Text overlay on trending sound
+                    <strong>Text:</strong> "POV: You finally stopped caring what people think"
+                    <strong>Caption:</strong> The 30-Day Transformation Program taught me how. Only $97. Link in bio 🔗
+                </div>
+                <div class="tags">
+                    <span class="tag">Format: Native-style content (not salesy)</span>
+                    <span class="tag">Sound: Trending audio</span>
+                </div>
+            </div>
+            
+            <div class="ad-variant">
+                <div class="variant-label">Hook Script 2</div>
+                <div class="ad-body">
+                    <strong>Visual:</strong> Talking head, fast cuts
+                    <strong>Opening:</strong> "Stop trying to 'be confident.' Do THIS instead 👇"
+                    <strong>Body:</strong> Quick tip + "I teach the full system in my program for $97"
+                    <strong>CTA:</strong> "Link in bio for the complete 30-day roadmap"
+                </div>
+                <div class="tags">
+                    <span class="tag">Hook in first 1 second</span>
+                    <span class="tag">Keep under 30 seconds</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Keywords for Google Ads -->
+        <div class="platform-section">
+            <div class="platform-header">
+                <div class="platform-icon google"><i class="fas fa-search"></i></div>
+                <div class="platform-name">Google Keywords to Target</div>
+            </div>
+            <pre>High Intent (Buy Now):
+- "confidence building course"
+- "how to be more confident program"
+- "self improvement course online"
+- "productivity training program"
+- "personal transformation course"
+- "confidence coach online"
+- "goal achievement program"
+
+Informational (Content Funnel):
+- "how to boost confidence"
+- "ways to increase productivity"
+- "how to achieve goals faster"
+- "confidence exercises that work"
+- "overcoming fear of speaking"
+
+Negative Keywords (Add These):
+- free
+- jobs
+- salary
+- pdf
+- book
+- definition
+- wikipedia</pre>
+        </div>
+        
+        <div class="tips-box">
+            <h3>Ad Testing Strategy</h3>
+            <ul>
+                <li><strong>Week 1:</strong> Launch 3 ad variants with $20/day each</li>
+                <li><strong>Week 2:</strong> Kill the worst performer. Double budget on the winner.</li>
+                <li><strong>Week 3:</strong> Test new headline/CTA on the winning creative</li>
+                <li><strong>Always:</strong> Track cost per acquisition (CPA) — aim for 3x return on ad spend (ROAS)</li>
+                <li><strong>Retargeting:</strong> Create a separate campaign for people who visited but didn't buy (lower cost, higher conversion)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
