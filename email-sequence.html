@@ -3,35 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Sequence Templates | TransformU</title>
+    <title>5-Day Email Sequence | jdublu AI</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #f5f5f5;
-            color: #333;
+            background: #0a0a0f;
+            color: #e0e0e0;
             line-height: 1.8;
             padding: 2em;
         }
         .container { max-width: 900px; margin: 0 auto; }
         h1 {
             text-align: center;
-            color: #1a1a2e;
+            color: #fff;
             margin-bottom: 0.5em;
             font-size: 2.5em;
         }
         .intro {
             text-align: center;
-            color: #666;
+            color: #888;
             margin-bottom: 3em;
         }
         .email-card {
-            background: #fff;
+            background: rgba(255,255,255,0.03);
             border-radius: 15px;
             padding: 2em;
             margin-bottom: 2em;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-            border-left: 5px solid #e94560;
+            border-left: 5px solid #00d4ff;
         }
         .email-header {
             display: flex;
@@ -39,11 +38,11 @@
             align-items: center;
             margin-bottom: 1em;
             padding-bottom: 1em;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
         .day-label {
-            background: #e94560;
-            color: #fff;
+            background: #00d4ff;
+            color: #0a0a0f;
             padding: 5px 15px;
             border-radius: 20px;
             font-size: 0.85em;
@@ -51,242 +50,240 @@
         }
         .subject-line {
             font-weight: bold;
-            color: #1a1a2e;
+            color: #fff;
         }
         .email-body {
             white-space: pre-line;
             font-family: Georgia, serif;
             line-height: 2;
-            color: #444;
+            color: #ccc;
         }
         .highlight {
-            background: #fff3cd;
+            background: rgba(0,212,255,0.1);
             padding: 2px 6px;
             border-radius: 3px;
             font-family: monospace;
             font-size: 0.9em;
+            color: #00d4ff;
         }
         .tips {
-            background: #e7f3ff;
+            background: rgba(0,212,255,0.05);
             border-radius: 10px;
             padding: 1.5em;
             margin-top: 2em;
+            border: 1px solid rgba(0,212,255,0.1);
         }
-        .tips h3 { color: #1a1a2e; margin-bottom: 0.5em; }
+        .tips h3 { color: #00d4ff; margin-bottom: 0.5em; }
         .tips ul { margin-left: 1.5em; }
-        .tips li { margin-bottom: 0.5em; }
+        .tips li { margin-bottom: 0.5em; color: #aaa; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Email Sequence Templates</h1>
-        <p class="intro">Copy and paste these into your email marketing platform. Send one per day after someone downloads your lead magnet.</p>
+        <h1>5-Day Email Nurture Sequence</h1>
+        <p class="intro">For HVAC/plumbing/electrical contractors who downloaded the After-Hours Playbook. Copy these into your email platform. Send one per day.</p>
         
         <!-- Email 1 -->
         <div class="email-card">
             <div class="email-header">
                 <div>
-                    <span class="day-label">Day 1 - Delivery</span>
-                    <div class="subject-line">Subject: Your Confidence Workbook is here [Download Inside]</div>
+                    <span class="day-label">Day 1 — Delivery</span>
+                    <div class="subject-line">Subject: Your After-Hours Playbook is here (+ a 10-min win)</div>
                 </div>
             </div>
             <div class="email-body">Hi {{first_name}},
 
-You made a great decision.
+Thanks for grabbing the After-Hours Playbook.
 
-Your 7-Day Confidence Challenge workbook is attached. (Or click here to download: https://jdublu.lat/workbook-download)
+Here's a 10-minute exercise that'll open your eyes:
 
-Here's how to get the most out of it:
+Go to your phone system or Google Business Profile. Count how many calls you got last week between 6 PM and 8 AM.
 
-1. Print it out — physical interaction = better results
-2. Start with Day 1 TONIGHT (takes 10 minutes)
-3. Don't skip ahead — each day builds on the last
+Now multiply that by your average job value.
 
-My favorite exercise? Day 3's "Mirror Method." Sounds weird, but it works. I've seen shy introverts become stage presenters using just that one technique.
+That's how much you left on the table while you were sleeping, eating dinner, or spending time with your family.
 
-I'll check in with you tomorrow with a quick tip that makes the whole challenge 10x more effective.
+Most HVAC contractors I audit are shocked by this number. One guy in Dallas realized he was losing $18,000/week to voicemail. In July. His busiest month.
+
+The playbook shows you exactly how to plug that leak. Start with the self-audit on page 3 — it'll take 5 minutes.
 
 Talk soon,
-Alex Morgan
+[YOUR_NAME]
 
-P.S. Hit reply and let me know — what's the #1 situation where you wish you felt more confident?</div>
+P.S. — Hit reply and tell me: how many after-hours calls did you get last week? I read every reply.</div>
         </div>
         
         <!-- Email 2 -->
         <div class="email-card">
             <div class="email-header">
                 <div>
-                    <span class="day-label">Day 2 - Story</span>
-                    <div class="subject-line">Subject: I used to freeze in meetings (here's what changed)</div>
+                    <span class="day-label">Day 2 — Story</span>
+                    <div class="subject-line">Subject: The $6,200 call that went to voicemail</div>
                 </div>
             </div>
             <div class="email-body">Hi {{first_name}},
 
-Quick question:
+Quick story:
 
-Have you started the workbook yet?
+Last summer, Mike — an HVAC contractor in Phoenix — got a call at 9:47 PM. A family's AC went out. 108 degrees outside. They had a 6-month-old baby.
 
-If not, no judgment. But I want to share why I created it.
+Mike's phone rang. He was at his daughter's softball game. It went to voicemail.
 
-Three years ago, I was the person who never spoke up in meetings. I'd have great ideas but couldn't get the words out. My heart would race. My mind would go blank.
+The homeowner called the next company on Google. They answered. Booked a $6,200 full system replacement. Mike never knew the call existed.
 
-I tried:
-❌ Positive thinking (didn't stick)
-❌ Reading self-help books (too vague)
-❌ Forcing myself to speak (traumatic)
+Here's the part that hurts: Mike had already paid for that lead. Google Ads. $85 click. The homeowner found him first. Chose him first. But his competitor got the job because they had an AI dispatcher answering calls at 10 PM.
 
-Then I discovered something: confidence isn't a personality trait. It's a skill.
+Mike's not a bad business owner. He just didn't know AI phone answering existed for small contractors.
 
-And like any skill, it can be trained with the right exercises.
+He does now. We built him an AI dispatcher last March. In his first 60 days, it captured 23 after-hours leads worth $31,000 in booked jobs.
 
-The 7-Day Challenge compresses the exact techniques that took me from silent observer to confident speaker — into one week.
+The homeowner with the baby? That scenario now gets answered instantly. Emergency triage. Address collected. On-call tech dispatched. Mike gets a text summary. He sleeps through the night.
 
-If you haven't started yet, open to Day 1 right now. It takes 10 minutes.
+If you haven't read the playbook yet, start with page 5 — "The Voicemail Math." It'll change how you think about your phone.
 
-Tomorrow, I'll share the one mistake almost everyone makes when trying to build confidence (and how to avoid it).
-
-Alex Morgan</div>
+[YOUR_NAME]</div>
         </div>
         
         <!-- Email 3 -->
         <div class="email-card">
             <div class="email-header">
                 <div>
-                    <span class="day-label">Day 3 - Value</span>
-                    <div class="subject-line">Subject: The #1 confidence mistake (are you making it?)</div>
+                    <span class="day-label">Day 3 — Case Study</span>
+                    <div class="subject-line">Subject: 47 after-hours leads in 30 days (Dallas HVAC)</div>
                 </div>
             </div>
             <div class="email-body">Hi {{first_name}},
 
-The biggest mistake people make when trying to build confidence?
+I want to show you exactly what happened when we built an AI system for a real HVAC contractor.
 
-They try to "feel" confident first, THEN act.
+The Business:
+- 8 techs, $2.4M annual revenue
+- Serving Dallas/Fort Worth
+- Running Google Ads + Angi
+- Had an answering service ($4,200/month) that took messages
 
-It doesn't work that way.
+The Problem:
+Their answering service couldn't qualify leads, check technician availability, or book appointments. They just took messages. By 8 AM, the office staff had 15-20 callbacks to make. Most homeowners had already found someone else.
 
-Confidence follows action. Not the other way around.
+What We Built:
+- AI chatbot on their website (qualifies repair vs. replace, checks availability, books directly)
+- AI phone answering for after-hours (6 PM — 7 AM + weekends)
+- Emergency triage: urgent calls get pushed to on-call tech immediately
+- Integration with their Housecall Pro calendar
 
-Here's a 60-second technique you can use today:
+The Results (First 30 Days):
+📞 47 after-hours conversations captured
+📅 31 appointments booked automatically
+💰 14 converted to jobs = $89,000 in revenue
+⏱️ Office staff saved 12 hours/week on callbacks
 
-The "Power Pose" Method:
-→ Stand up straight
-→ Hands on hips, chest open
-→ Hold for 2 minutes
-→ Breathe deeply
+The answering service? Canceled. The AI costs $0 in monthly fees (we built it, they own it).
 
-Sounds too simple? Harvard research shows it actually reduces cortisol (stress hormone) and increases testosterone (confidence hormone).
+Here's what the owner told me: "I used to wake up anxious checking voicemail. Now I wake up to a text summary of jobs booked while I slept."
 
-Try it before your next challenging situation. It works.
+This isn't futuristic tech. This is live right now for contractors in your market.
 
-This is exactly the kind of technique we dive deep into in the full 30-Day Transformation Program.
+Tomorrow, I'll share the #1 objection I hear from contractors considering AI — and why it's usually wrong.
 
-The workbook gives you a taste. The program gives you the complete system.
+[YOUR_NAME]
 
-More on that tomorrow.
-
-For now, try the Power Pose and let me know how it feels.
-
-Alex Morgan</div>
+P.S. — Want to see if this would work for your business? I offer free 20-minute AI audits. No pitch, just math. Book here: https://cal.com/m-jway-mk-janway-kqkdfa/free-ai-audit</div>
         </div>
         
         <!-- Email 4 -->
         <div class="email-card">
             <div class="email-header">
                 <div>
-                    <span class="day-label">Day 4 - Objections</span>
-                    <div class="subject-line">Subject: "What if this doesn't work for me?"</div>
+                    <span class="day-label">Day 4 — Objections</span>
+                    <div class="subject-line">Subject: "But my customers want to talk to a human"</div>
                 </div>
             </div>
             <div class="email-body">Hi {{first_name}},
 
-I get this question a lot:
+I hear this objection a lot:
 
-"I've tried everything. What makes your program different?"
+"My customers want to talk to a human. They won't trust a robot."
 
-Fair question.
+Fair concern. But here's what actually happens:
 
-Here's the honest answer:
+Your customer at 10 PM with a burst pipe doesn't want to talk to a human. They want:
+1. Someone to answer immediately
+2. To know help is coming
+3. A confirmed appointment time
 
-Most confidence advice is generic. "Believe in yourself." "Just be positive." "Fake it till you make it."
+They don't care if it's AI, a human, or a very smart dog. They care that their problem is handled.
 
-Vague, right? No wonder it doesn't work.
+The AI we build doesn't sound like a robot. It asks the same questions your best dispatcher asks:
+- "Is this an emergency or can it wait until morning?"
+- "What's the address?"
+- "When's the last time your system was serviced?"
+- "I'll get you on the schedule for tomorrow between 8 and 10 AM. You'll get a text confirmation."
 
-The 30-Day Transformation Program is different because it's:
+It speaks in your brand voice. It knows your pricing. It never gets frustrated, never calls in sick, and never puts someone on hold.
 
-✅ SPECIFIC — exact scripts, exercises, and daily actions
-✅ SCIENCE-BACKED — based on behavioral psychology research
-✅ STRUCTURED — no guessing what to do each day
-✅ PROVEN — 1,000+ people have gone through it
+And here's the kicker: if the AI can't handle something, it escalates to you with a full transcript. You see everything.
 
-But here's what REALLY makes it work:
+The contractors using this? Their customer satisfaction scores went UP. Because customers got instant answers instead of voicemail.
 
-It's designed for people who've "tried everything" and still feel stuck.
+One more thing: the AI doesn't replace your office staff. It handles the 60% of calls that are routine (booking, pricing questions, rescheduling) so your humans focus on the 40% that actually need a human touch.
 
-Every technique is tested. Every exercise has a purpose. Nothing is filler.
+Tomorrow is Day 5. I'll make you an offer that makes this a no-brainer.
 
-And if it doesn't work for you? You get every penny back. No questions. No hoops to jump through.
-
-I'll send you the details tomorrow. But if you're already curious, you can check it out here: https://jdublu.lat/program
-
-Talk soon,
-Alex Morgan</div>
+[YOUR_NAME]</div>
         </div>
         
         <!-- Email 5 -->
         <div class="email-card">
             <div class="email-header">
                 <div>
-                    <span class="day-label">Day 5 - Pitch + Urgency</span>
-                    <div class="subject-line">Subject: [LAST CHANCE] Doors close tonight at midnight</div>
+                    <span class="day-label">Day 5 — Soft Pitch</span>
+                    <div class="subject-line">Subject: [LAST CHANCE] June spots for AI setup</div>
                 </div>
             </div>
             <div class="email-body">Hi {{first_name}},
 
-This is it.
+This is the last email in the series.
 
-Tomorrow, the price for the 30-Day Transformation Program goes up.
+Over the past 4 days, I've shown you:
+- How much you're losing to voicemail (probably more than you think)
+- What happened when a real Dallas HVAC contractor fixed it
+- Why customers actually prefer instant AI responses
 
-Right now, you can get the complete system for $97.
+Now here's the offer:
 
-Tomorrow? $197.
+I only take on 6 new contractors per month. I personally build and train every AI system. Quality over quantity.
 
-Why the increase?
+June has 2 spots left.
 
-Because I personally support every member, and I can only handle so many people at once. The current cohort is almost full.
+If you're even slightly curious whether AI could work for your business, book a free 20-minute audit. Here's what happens:
 
-Here's what you get:
+1. You show me your current call flow
+2. I calculate exactly how many leads you're losing per month
+3. I show you a clear plan to fix it — with exact pricing
+4. You decide yes or no. No pressure.
 
-📋 Complete 30-day step-by-step roadmap
-🎥 10 video training modules
-📖 Fillable workbook & journal prompts
-👥 Private community access
-🎁 Bonus: "The Confidence Accelerator" mini-course
-💬 2 live Q&A calls with me
+The audit is free. The information you'll get is worth more than most paid consultations.
 
-Plus the 100% money-back guarantee.
+👉 Book here: https://cal.com/m-jway-mk-janway-kqkdfa/free-ai-audit
 
-If you don't feel more confident in 30 days, I'll refund you. Period.
+If now's not the right time, I get it. Keep the playbook. Implement what you can on your own. And when you're ready, my door's open.
 
-<a href="https://jdublu.lat/checkout" style="background:#e94560;color:#fff;padding:15px 30px;border-radius:8px;text-decoration:none;font-weight:bold;display:inline-block;margin:1em 0;">Get Instant Access Now</a>
+Thanks for reading this week.
 
-Don't let another year go by feeling like you're hiding your potential.
+[YOUR_NAME]
 
-You have everything you need inside you. This program just helps you unlock it — faster.
-
-See you inside,
-Alex Morgan
-
-P.S. Doors close at midnight tonight. After that, you'll have to wait for the next enrollment (and pay the higher price). <a href="https://jdublu.lat/checkout">Click here to secure your spot</a>.</div>
+P.S. — One emergency call covers the entire setup cost. Everything after that is profit. Book the audit and let's see your numbers.</div>
         </div>
         
         <div class="tips">
-            <h3>How to Use These Emails</h3>
+            <h3>How to Set This Up</h3>
             <ul>
-                <li><strong>Mailchimp:</strong> Create an automated sequence triggered when someone joins your list</li>
-                <li><strong>ConvertKit:</strong> Set up a "Visual Automation" with these as the sequence emails</li>
+                <li><strong>Mailchimp:</strong> Create an automated sequence triggered when someone joins your "HVAC Leads" audience</li>
+                <li><strong>ConvertKit:</strong> Set up a "Visual Automation" — lead magnet download triggers the 5-day sequence</li>
                 <li><strong>ActiveCampaign:</strong> Build an automation with a 1-day delay between each email</li>
-                <li>Update <span class="highlight">{{first_name}}</span> to match your email platform's merge tag (e.g., <code>*|FNAME|*</code> for Mailchimp, <code>{{ subscriber.first_name }}</code> for ConvertKit)</li>
-                <li>Send at approximately 8-9 AM in your audience's timezone for best open rates</li>
+                <li>Replace <span class="highlight">{{first_name}}</span> with your platform's merge tag (e.g., <code>*|FNAME|*</code> for Mailchimp)</li>
+                <li>Replace <span class="highlight">[YOUR_NAME]</span> with your actual name</li>
+                <li>Send at 8-9 AM in your prospect's timezone for best open rates</li>
             </ul>
         </div>
     </div>

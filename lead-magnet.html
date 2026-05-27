@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free AI Cost-Cutting Guide | jdublu AI</title>
+    <title>Free Guide: AI Appointment Setter | jdublu AI</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,7 +34,7 @@
             letter-spacing: 1px;
             margin-bottom: 2em;
         }
-        h1 { font-size: 2.8em; margin-bottom: 0.5em; line-height: 1.2; font-weight: 800; }
+        h1 { font-size: 2.6em; margin-bottom: 0.5em; line-height: 1.2; font-weight: 800; }
         h1 .highlight {
             background: linear-gradient(135deg, #00d4ff, #7b2cbf);
             -webkit-background-clip: text;
@@ -123,7 +123,6 @@
         }
         .secondary-cta a:hover { text-decoration: underline; }
 
-        /* Success state */
         .success-box {
             display: none;
             text-align: center;
@@ -145,29 +144,29 @@
 </head>
 <body>
     <div class="container">
-        <div class="badge">Free Download</div>
-        <h1>The After-Hours Playbook: How HVAC & Plumbing Contractors Capture <span class="highlight">47% More Leads</span> With AI</h1>
-        <p class="subtitle">A no-fluff guide for home service contractors who are sick of losing emergency calls to voicemail.</p>
+        <div class="badge">Free PDF + Video Walkthrough</div>
+        <h1>The AI Appointment Setter Blueprint: How Contractors <span class="highlight">Never Miss Another Call</span></h1>
+        <p class="subtitle">The exact system we use to build 24/7 AI appointment setters for HVAC, plumbing, and electrical contractors — no coding required.</p>
         
         <div class="features">
             <h3>What's Inside:</h3>
             <ul>
-                <li><i class="fas fa-check-circle"></i> The exact script our AI uses to turn "my AC is broken" into a booked appointment</li>
-                <li><i class="fas fa-check-circle"></i> A self-audit: how many leads did YOU lose to voicemail last month?</li>
-                <li><i class="fas fa-check-circle"></i> Real numbers: what 3 HVAC contractors paid vs. revenue captured in 60 days</li>
-                <li><i class="fas fa-check-circle"></i> The #1 reason contractors fire answering services (and what replaces them)</li>
+                <li><i class="fas fa-check-circle"></i> The exact conversation script our AI uses to book appointments</li>
+                <li><i class="fas fa-check-circle"></i> Step-by-step setup checklist (do it yourself or hire us)</li>
+                <li><i class="fas fa-check-circle"></i> Cost breakdown: AI vs. answering service vs. hiring a dispatcher</li>
+                <li><i class="fas fa-check-circle"></i> 3 real contractor case studies with revenue numbers</li>
                 <li><i class="fas fa-check-circle"></i> Bonus: Emergency call triage flowchart</li>
             </ul>
         </div>
         
         <div class="form-box" id="form-box">
             <h2>Get Instant Access</h2>
-            <p>Enter your details and the PDF will be emailed to you immediately.</p>
+            <p>Enter your details and the blueprint will be emailed to you immediately.</p>
             <form id="leadForm">
                 <input type="text" name="name" placeholder="Your First Name" required>
                 <input type="email" name="email" placeholder="Your Best Email Address" required>
                 <input type="text" name="business" placeholder="Your Company Name (e.g., Smith HVAC)" required>
-                <button type="submit" class="cta-btn">Send Me The Free Guide <i class="fas fa-arrow-right"></i></button>
+                <button type="submit" class="cta-btn">Send Me The Blueprint <i class="fas fa-arrow-right"></i></button>
             </form>
             <div class="trust-text">
                 <i class="fas fa-lock"></i> Your information is secure. Unsubscribe anytime.
@@ -182,7 +181,7 @@
         <div class="success-box" id="success-box">
             <i class="fas fa-check-circle"></i>
             <h2>Check Your Inbox!</h2>
-            <p>The guide is on its way. While you wait, book your free AI audit — spots are limited.</p>
+            <p>The blueprint is on its way. While you wait, book your free AI audit — spots are limited.</p>
             <a href="https://cal.com/m-jway-mk-janway-kqkdfa/free-ai-audit" target="_blank" class="cta-btn">Book Free AI Audit</a>
         </div>
     </div>
@@ -190,28 +189,14 @@
     <script>
         document.getElementById('leadForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Capture data (connect to Formspree, ConvertKit, or Mailchimp for real capture)
             const data = {
                 name: this.name.value,
                 email: this.email.value,
                 business: this.business.value
             };
             console.log('Lead captured:', data);
-            
-            // Hide form, show success
             document.getElementById('form-box').style.display = 'none';
             document.getElementById('success-box').style.display = 'block';
-            
-            // TODO: Connect to your email service
-            // Formspree: https://formspree.io (free, 50 submissions/mo)
-            // ConvertKit: https://convertkit.com (paid, better automation)
-            // Example Formspree integration:
-            // fetch('https://formspree.io/f/YOUR_FORM_ID', {
-            //     method: 'POST',
-            //     headers: {'Content-Type': 'application/json'},
-            //     body: JSON.stringify(data)
-            // });
         });
     </script>
 </body>
