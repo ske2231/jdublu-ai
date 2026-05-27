@@ -161,6 +161,102 @@
         }
         .stat p { color: #666; font-size: 0.95em; }
         
+        /* Trust Bar */
+        .trust-bar {
+            padding: 3em 2em;
+            background: #0a0a0f;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            text-align: center;
+        }
+        .trust-bar p {
+            color: #555;
+            font-size: 0.85em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5em;
+        }
+        .trust-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .trust-logos span {
+            color: #444;
+            font-size: 1.3em;
+            font-weight: 700;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .trust-logos span:hover { opacity: 1; color: #888; }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 5em 2em;
+            background: radial-gradient(ellipse at center, #120a1e 0%, #0a0a0f 70%);
+        }
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .testimonial-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 2.5em;
+            position: relative;
+        }
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4em;
+            color: rgba(0,212,255,0.15);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            line-height: 1;
+        }
+        .testimonial-card p {
+            color: #aaa;
+            font-size: 1.05em;
+            line-height: 1.7;
+            margin-bottom: 1.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #fff;
+            font-size: 1.1em;
+        }
+        .testimonial-author div h4 {
+            color: #fff;
+            font-size: 1em;
+            margin-bottom: 3px;
+        }
+        .testimonial-author div span {
+            color: #555;
+            font-size: 0.85em;
+        }
+        
         /* Problem Section */
         .problem {
             padding: 6em 2em;
@@ -455,6 +551,61 @@
                 <div class="stat">
                     <h3>&lt;2min</h3>
                     <p>Avg. Response Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Trust Bar -->
+    <section class="trust-bar">
+        <p>Built With Industry-Leading AI</p>
+        <div class="trust-logos">
+            <span>OpenAI</span>
+            <span>Claude</span>
+            <span>n8n</span>
+            <span>Make</span>
+            <span>Zapier</span>
+            <span>Replit</span>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by Business Owners</h2>
+                <p>Real results from real businesses. Replace these with your first clients.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"We were losing leads every night and weekend. jdublu built us an AI chatbot that books appointments while we sleep. Our calendar is full and we hired 0 new staff."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MJ</div>
+                        <div>
+                            <h4>Your First Client</h4>
+                            <span>Owner, [Business Name]</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I was skeptical about AI. 30 days in and our customer response time went from 4 hours to under 2 minutes. The ROI was obvious by week two."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AS</div>
+                        <div>
+                            <h4>Your Second Client</h4>
+                            <span>CEO, [Company Name]</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"They didn't just sell us a chatbot — they built a full AI system that handles support, qualifies leads, and integrates with our CRM. Best investment we made this year."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">TK</div>
+                        <div>
+                            <h4>Your Third Client</h4>
+                            <span>Founder, [Startup Name]</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
